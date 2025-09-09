@@ -72,3 +72,17 @@ git commit -m "chore: Create fourth file"
 git rebase --continue
 #Successfully rebased and updated refs/heads/main.
 ```
+
+5. Advanced squashing:
+
+```bash
+#Using interactive rebase to sqash commits.
+
+#Opening rebase for the last 6 commits
+git rebase -i HEAD~6
+
+#Use rebase 'squash' command to merge two commits
+
+#Added a different commit message
+
+```
