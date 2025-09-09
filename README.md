@@ -12,7 +12,7 @@
 #Stage the new file
 git add test4.md
 
-#include the the file in the recent commit
+#include the file in the recent commit
 git commit --amend --no-edit
 ```
 
@@ -45,4 +45,100 @@ git rebase -i HEAD~5
 #  create mode 100644 test1.md
 #  create mode 100644 test2.md
 # Successfully rebased and updated refs/heads/main.
+```
+
+4. Splitting a Commit:
+
+```bash
+#Using interactive rebase to split a commit into two different commits.
+
+#Opening rebase for the last 4 commits
+git rebase -i HEAD~4
+
+#Use rebase 'edit' to change edit the commit
+
+#Used reset to remove the commit but remain with changes
+git reset HEAD^
+
+#Stage and commit third file
+git add test3.md
+git commit -m "chore: Create third file"
+
+#Stage and commit fourth file
+git add test4.md
+git commit -m "chore: Create fourth file"
+
+#Done
+git rebase --continue
+#Successfully rebased and updated refs/heads/main.
+```
+
+5. Advanced squashing:
+
+```bash
+#Using interactive rebase to sqash commits.
+
+#Opening rebase for the last 6 commits
+git rebase -i HEAD~6
+
+#Use rebase 'squash' command to merge two commits
+
+#Added a different commit message
+
+```
+
+6. Droping a commit:
+
+```bash
+#Create a 'unwanted file' for testing
+echo "Unwanted commit" > unwanted.txt
+
+#Stage and commit the unwanted file
+git add unwanted.txt
+git commit -m "Unwanted file to be dropped"
+
+#Opening rebase for the last 2 commits
+git rebase -i HEAD~2
+
+#Use rebase 'drop' command to remove unwanted file from history
+
+```
+
+7. Cherry-picking Commits:
+
+```bash
+#Create a branch to test
+git checkout -b ft/branch
+
+#Create a file with content to test
+echo "test" > test5.md
+
+#Stage and commit
+git add test5.md
+git commit -m "Implemented test 5"
+
+#Select the commit hash eg: f65c313
+#Checkout to main
+git checkout main
+
+#CHERRY-PICK
+git cherry-pick f65c313
+#Now the commit from ft/branch is on main
+```
+
+8. Reorder Commits:
+
+```bash
+#Use git rebase to rearrange the order
+git rebase -i HEAD~5
+
+#Before re-order
+
+# pick adbc0c7 Exercise 4
+# pick ed33af4 Exercise 5
+# pick feecdde Exercise 6
+# pick c07d080 Implemented test 5
+# pick abd7d0d Exercise 7
+
+
 ```
