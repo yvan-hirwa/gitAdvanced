@@ -46,3 +46,29 @@ git rebase -i HEAD~5
 #  create mode 100644 test2.md
 # Successfully rebased and updated refs/heads/main.
 ```
+
+4. Splitting a Commit:
+
+```bash
+#Using interactive rebase to split a commit into two different commits.
+
+#Opening rebase for the last 4 commits
+git rebase -i HEAD~4
+
+#Use rebase 'edit' to change edit the commit
+
+#Used reset to remove the commit but remain with changes
+git reset HEAD^
+
+#Stage and commit third file
+git add test3.md
+git commit -m "chore: Create third file"
+
+#Stage and commit fourth file
+git add test4.md
+git commit -m "chore: Create fourth file"
+
+#Done
+git rebase --continue
+#Successfully rebased and updated refs/heads/main.
+```
