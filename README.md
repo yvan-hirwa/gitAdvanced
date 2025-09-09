@@ -86,3 +86,20 @@ git rebase -i HEAD~6
 #Added a different commit message
 
 ```
+
+6. Droping a commit:
+
+```bash
+#Create a 'unwanted file' for testing
+echo "Unwanted commit" > unwanted.txt
+
+#Stage and commit the unwanted file
+git add unwanted.txt
+git commit -m "Unwanted file to be dropped"
+
+#Opening rebase for the last 2 commits
+git rebase -i HEAD~2
+
+#Use rebase 'drop' command to remove unwanted file from history
+
+```
