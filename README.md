@@ -12,7 +12,7 @@
 #Stage the new file
 git add test4.md
 
-#include the file in the recent commit
+#include the the file in the recent commit
 git commit --amend --no-edit
 ```
 
