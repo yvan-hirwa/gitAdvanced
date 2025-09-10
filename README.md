@@ -192,3 +192,42 @@ git reflog
 # feecdde HEAD@{13}: commit: Exercise 6
 # ed33af4 HEAD@{14}: rebase (finish): returning to refs/heads/main
 ```
+
+## Part 2: Branching Basics
+
+1. Create Feature Branch
+
+```bash
+git checkout -b ft/new-feature
+# Switched to a new branch 'ft/new-feature'
+```
+
+2. Working on a feature branch
+
+```bash
+# Create new file with some content'
+echo "This is a new feature">feature.txt
+
+#Stage and Commit
+git add feature.txt
+git commit -m "Feat: Add the the core functionality"
+```
+
+3. Switching back and Making changes
+
+```bash
+# Switching back to main
+git switch main
+# Switched to branch 'main'
+# Your branch is up to date with 'origin/main'.
+
+# create a new file
+echo "Readme project">readme.txt
+
+#stage and commit
+git add readme.txt
+git commit -m "Updated project readme"
+# [main 11df35f] Updated project readme
+#  1 file changed, 0 insertions(+), 0 deletions(-)
+#  create mode 100644 readme.txt
+```
