@@ -148,3 +148,47 @@ git rebase -i HEAD~5
 # pick f2e0abe Exercise 6:Resolved conflicts
 # pick 757096b Implemented test 5
 ```
+
+9. Visualizing Commit History
+
+```bash
+git log --graph
+
+# * commit 08d4de02bb29bc9d2cb5cfa03280d743523b53c1 (HEAD -> main, origin/main, origin/HEAD)
+# | Author: yvan-hirwa <hirwakaranganwayvan@gmail.com>
+# | Date:   Wed Sep 10 15:54:13 2025 +0200
+# |
+# |     Exercise 8
+# |
+# * commit 757096b6da52e2fd5fd48cf7eb35a7ed5403d022
+# | Author: yvan-hirwa <hirwakaranganwayvan@gmail.com>
+# | Date:   Tue Sep 9 16:42:52 2025 +0200
+# |
+# |     Implemented test 5
+# |
+# * commit f2e0abe2acd1bfd1dfa06a81032afda421f2cec5
+# | Author: yvan-hirwa <hirwakaranganwayvan@gmail.com>
+# | Date:   Tue Sep 9 16:36:43 2025 +0200
+```
+
+10. Git Operation
+
+```bash
+git reflog
+
+# 08d4de0 (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: commit: Exercise 8
+# 757096b HEAD@{1}: rebase (finish): returning to refs/heads/main
+# 757096b HEAD@{2}: rebase (start): checkout HEAD~5
+# 757096b HEAD@{3}: rebase (finish): returning to refs/heads/main
+# 757096b HEAD@{4}: rebase (pick): Implemented test 5
+# f2e0abe HEAD@{5}: rebase (continue): Exercise 6:Resolved conflicts
+# f2f0be3 HEAD@{6}: rebase (continue): Exercise 7: Resolved README.md conflicts
+# a955314 HEAD@{7}: rebase (start): checkout HEAD~5
+# abd7d0d HEAD@{8}: commit: Exercise 7
+# c07d080 HEAD@{9}: cherry-pick: Implemented test 5
+# feecdde HEAD@{10}: checkout: moving from ft/branch to main
+# f65c313 (ft/branch) HEAD@{11}: commit: Implemented test 5
+# feecdde HEAD@{12}: checkout: moving from main to ft/branch
+# feecdde HEAD@{13}: commit: Exercise 6
+# ed33af4 HEAD@{14}: rebase (finish): returning to refs/heads/main
+```
