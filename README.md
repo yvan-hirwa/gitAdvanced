@@ -140,5 +140,11 @@ git rebase -i HEAD~5
 # pick c07d080 Implemented test 5
 # pick abd7d0d Exercise 7
 
+#After
 
+# pick c55f7d3 Exercise 2
+# pick a955314 Exercise 3
+# pick f2f0be3 Exercise 7: Resolved README.md conflicts
+# pick f2e0abe Exercise 6:Resolved conflicts
+# pick 757096b Implemented test 5
 ```
