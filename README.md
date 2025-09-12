@@ -337,4 +337,15 @@ git stash push -u -m "WIP: git stashing"
 git stash list
 
 #apply the latest stash
+git stash apply
+```
+
+4. Merge conflicts with mergetool
+
+```bash
+#Create a conflict
+#Files on different branches try to merge
+#Setup or use vscode mergetool
+git add
+git commit # To finish the merge.
 ```
