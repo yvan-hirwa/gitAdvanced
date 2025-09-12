@@ -253,3 +253,54 @@ git merge ft/new-feature
 git branch -d ft/new-feature
 # Deleted branch ft/new-feature (was 488a640).
 ```
+
+6. Creating a Branch from a commit
+
+```bash
+#Find the commit and copy the hash
+git log --oneline
+
+#Create the branch off the commit and switch to it
+git checkout -b ft/branch-from-commit 14c37d7
+```
+
+6. Creating a Branch from a commit
+
+```bash
+#Find the commit and copy the hash
+git log --oneline
+
+#Create the branch off the commit and switch to it
+git checkout -b ft/branch-from-commit 14c37d7
+```
+
+7. Branch Merging
+
+```bash
+#Switch from the branch to merge
+git switch main
+
+#Create the branch off the commit and switch to it
+git merge ft/branch-from-commit
+```
+
+8. Renaming Branches
+
+```bash
+#Check the brach to rename
+git branch
+
+#Before
+
+# ft/branch
+# ft/branch-from-commit
+# * main
+
+#Rename
+git branch -m ft/branch-from-commit ft/commit-branch
+
+#After
+# ft/branch
+# ft/commit-branch
+# * main
+```
