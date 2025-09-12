@@ -231,3 +231,25 @@ git commit -m "Updated project readme"
 #  1 file changed, 0 insertions(+), 0 deletions(-)
 #  create mode 100644 readme.txt
 ```
+
+4. Local vs. Remote Branches
+
+```bash
+#A local branches are where you write and commit code, while remote branches serve as a shared record of the project's development history on a server.
+```
+
+5. Branch Deletion
+
+```bash
+#Switch to main branch
+git switch main
+# Switched to branch 'main'
+# Your branch is up to date with 'origin/main'.
+
+#Merge the feature branch to main
+git merge ft/new-feature
+
+#Delete the branch
+git branch -d ft/new-feature
+# Deleted branch ft/new-feature (was 488a640).
+```
