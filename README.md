@@ -349,3 +349,14 @@ git stash apply
 git add
 git commit # To finish the merge.
 ```
+
+5. Detached HEAD
+
+```bash
+#A detached HEAD means your HEAD is pointing directly to a commit instead of a branch.
+#Checkout a commit to detach a HEAD
+git checkout a1b2c34 #commit hash
+
+#Checkout a branch to reattach the the HEAD
+git checkout ft/branch
+```
