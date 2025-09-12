@@ -315,3 +315,17 @@ git checkout A1b2c34
 git checkout main
 
 ```
+
+## Part 3: Advanced Workflows
+
+1. Stashing changes
+
+```bash
+#Create a file to test stashing
+echo "This file is for stashing">stashing.txt
+
+#Stash the current changes with a message
+git stash push -u -m "WIP: git stashing"
+#The -u is for untracked files
+# Saved working directory and index state On main: WIP: git stashing
+```
