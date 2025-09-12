@@ -329,3 +329,12 @@ git stash push -u -m "WIP: git stashing"
 #The -u is for untracked files
 # Saved working directory and index state On main: WIP: git stashing
 ```
+
+2. Retrieve the stashed changes
+
+```bash
+#Check the stash
+git stash list
+
+#apply the latest stash
+```
