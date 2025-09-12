@@ -304,3 +304,14 @@ git branch -m ft/branch-from-commit ft/commit-branch
 # ft/commit-branch
 # * main
 ```
+
+10. Detached HEAD
+
+```bash
+#Check out a specific commit to detach head
+git checkout A1b2c34
+
+#To reattach checkout a branch
+git checkout main
+
+```
