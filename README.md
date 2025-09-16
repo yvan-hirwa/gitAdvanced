@@ -391,3 +391,15 @@ git tag -a v1.0.0 -m "First tag release"
 #This is not a lightweight tag but the annotated tag
 #This tag is on the latest commit since I didn't provide a commit hash.
 ```
+
+8. Listing and Deleting Tags
+
+```bash
+#Listing
+git tag #or
+git tag -l "v1*" #To list every tag starting with v1
+# v1.0.0
+
+#Deleting
+git tag -d v1.0.0
+```
