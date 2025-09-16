@@ -360,3 +360,34 @@ git checkout a1b2c34 #commit hash
 #Checkout a branch to reattach the the HEAD
 git checkout ft/branch
 ```
+
+6. Ignoring Files/Directories:
+
+```bash
+#Create a .gitignore file
+#Add some file and directories like
+#/tmp
+# /node_modules
+# *.cmd
+#Save and commit
+```
+
+6. Ignoring Files/Directories
+
+```bash
+#Create a .gitignore file
+#Add some file and directories like
+#/tmp
+# /node_modules
+# *.cmd
+#Save and commit
+```
+
+7. Working with Tags
+
+```bash
+#To create an annotated tag with a message do:
+git tag -a v1.0.0 -m "First tag release"
+#This is not a lightweight tag but the annotated tag
+#This tag is on the latest commit since I didn't provide a commit hash.
+```
