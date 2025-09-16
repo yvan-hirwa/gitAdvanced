@@ -412,7 +412,7 @@ git tag -d v1.0.0
 git push -u origin main
 ```
 
-9. Pulling changes from a remote repository
+10. Pulling changes from a remote repository
 
 ```bash
 git pull origin main
