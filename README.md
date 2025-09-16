@@ -403,3 +403,17 @@ git tag -l "v1*" #To list every tag starting with v1
 #Deleting
 git tag -d v1.0.0
 ```
+
+9. Pushing to a remote repository
+
+```bash
+#After creating a remote repository
+#After commit
+git push -u origin main
+```
+
+9. Pulling changes from a remote repository
+
+```bash
+git pull origin main
+```
